@@ -1,1 +1,94 @@
 @import '~bootstrap/scss/bootstrap';
+
+
+h2 {
+    font-size: 12px;
+    text-align: center;
+}
+
+.actualPlayButton {
+  border: 2px solid #999999;
+  background-color: inherit;
+  padding: 2px 2px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.title_bar {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  //height: 6vh;
+  width: 100%;
+  background-color: #929749;
+  margin-bottom: 10px;
+}
+
+.button_container {
+  display: inline-flex;
+  //background: #009900;
+  padding: 4px;
+  align-items: stretch;
+}
+
+.button_container > div {
+  //margin: 10px;
+}
+
+body {
+  justify-content: center;
+  background-color: #927392;
+}
+
+div.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #927392;
+}
+
+.board_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 3px;
+  flex-grow: 1;
+  border-radius: 30px;
+}
+
+.board_container > div {
+  background: #554499;
+  //padding: 3em;
+  margin: 4px;
+  justify-self: center;
+  font-size: 80px;
+  border: 2px solid #000000;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.user_container {
+  background: #920092;
+  justify-self: center;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.game_container {
+  background: #009933;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+  text-align: left;
+}
+
+.play_button {
+  background: #009933;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+  text-align: center;
+}
