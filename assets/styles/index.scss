@@ -19,11 +19,18 @@ h2 {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
-  //height: 6vh;
+  height: auto;
   width: 100%;
   background-color: #929749;
   margin-bottom: 10px;
 }
+
+/*span {
+  background: #000099;
+  text-align: right;
+  float: right;
+  position: absolute;
+}*/
 
 .button_container {
   display: inline-flex;
@@ -47,7 +54,7 @@ div.main {
   background-color: #927392;
 }
 
-.board_container {
+#board_container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto;
@@ -56,8 +63,53 @@ div.main {
   border-radius: 30px;
 }
 
-.board_container > div {
-  background: #554499;
+#box.a1 {
+  background: #929273;
+  text-align: center;
+}
+
+#box.a2 {
+  background: #770055;
+  text-align: center;
+}
+
+#box.a3 {
+  background: #929273;
+  text-align: center;
+}
+
+#box.b1 {
+  background: #770055;
+  text-align: center;
+}
+
+#box.b2 {
+  background: #929273;
+  text-align: center;
+}
+
+#box.b3 {
+  background: #770055;
+  text-align: center;
+}
+
+#box.c1 {
+  background: #929273;
+  text-align: center;
+}
+
+#box.c2 {
+  background: #770055;
+  text-align: center;
+}
+
+#box.c3 {
+  background: #929273;
+  text-align: center;
+}
+
+#box {
+  background: #000000;
   //padding: 3em;
   margin: 4px;
   justify-self: center;
