@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-      <title>Example</title>
+      <title>Tic-Tac-Boom: A game about taking.</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
 
       <!-- Do not add `link` tags-->
@@ -11,7 +11,143 @@
       <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
-    <body>
-      <h1>Browser Template</h1>
-    </body>
+
+  <body>
+
+    <div class="title_bar">
+      <div class="title">
+        <h1>Tic-Tac-Boom</h1>
+        <h2>A game about a dog</h2>
+      </div>
+
+    <div class="unauth">
+    <div class="signforms">
+      <div class="button_container">
+      <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#register">
+        Register
+      </button>
+
+      <div class="button_container">
+      <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#login">
+        Login
+      </button>
+    </div>
+
+      <div class="modal fade" id="register" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Registration</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <form id="registration">
+                  <div class="form-group">
+                    <label>Desired Username</label>
+                    <input type="text" class="form-control" name="credentials[email]">
+                  </div>
+                  <div class="form-group">
+                    <label>Password</label>
+                    <input type="password" class="form-control" name="credentials[password]">
+                  </div>
+                  <div class="form-group">
+                    <label>Confirm Password</label>
+                    <input type="password" class="form-control" name="credentials[password_confirmation]">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal fade" id="login" tabindex="-1">
+          <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Login</h5>
+                  <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                  <form id="log-in">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Username</label>
+                      <input type="text" class="form-control" id="in.username">
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="in.password">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="auth">
+      <div class="signforms">
+        <div class="button_container">
+        <button type="button" class="btn btn-outline-light" id="log-out">
+          Logoff
+        </button>
+      </div>
+    </div>
+  </div>
+
+    <div class="main">
+      <div id="board_container">
+        <div class="a1" id="box">
+          <p>X</p>
+        </div>
+        <div class="a2" id="box">
+          <p>O</p>
+        </div>
+        <div class="a3" id="box">
+          <p>X</p>
+        </div>
+        <div class="b1" id="box">
+          <p>O</p>
+        </div>
+        <div class="b2" id="box">
+          <p>X</p>
+        </div>
+        <div class="b3" id="box">
+          <p>O</p>
+        </div>
+        <div class="c1" id="box">
+          <p>X</p>
+        </div>
+        <div class="c2" id="box">
+          <p>O</p>
+        </div>
+        <div class="c3" id="box">
+          <p>X</p>
+        </div>
+      </div>
+
+      <div class="user_container">
+        <h1>This is an H1 in the user box</h1>
+      <div class="game_container">
+        <h1>This is an H1 in the game box</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi leo urna molestie at elementum eu facilisis. Tincidunt vitae semper quis lectus nulla. Bibendum arcu vitae elementum curabitur vitae. Enim sit amet venenatis urna. Cursus vitae congue mauris rhoncus aenean vel elit. Ut faucibus pulvinar elementum integer. Quisque sagittis purus sit amet volutpat consequat mauris. Elit duis tristique sollicitudin nibh. Consectetur purus ut faucibus pulvinar. Nisl suscipit adipiscing bibendum est ultricies. Et leo duis ut diam quam nulla porttitor. Praesent elementum facilisis leo vel fringilla. Nisl vel pretium lectus quam id leo. Amet nisl purus in mollis nunc. Diam phasellus vestibulum lorem sed risus ultricies. Eu scelerisque felis imperdiet proin fermentum leo vel.</p>
+      </div>
+
+      <div class="play_button">
+      <button class="actualPlayButton" type="submit" name="button">
+        <h1>Journey Into Infinity</h1>
+      </button>
+      </div>
+    </div>
+
+  </body>
 </html>
