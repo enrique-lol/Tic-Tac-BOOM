@@ -77,12 +77,12 @@
                 <div class="modal-body">
                   <form id="log-in">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Username</label>
-                      <input type="text" class="form-control" id="in.username">
+                      <label for="exampleInputEmail1">Username</label>*
+                      <input type="text" class="form-control" name="credentials[email]">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Password</label>
-                      <input type="password" class="form-control" id="in.password">
+                      <input type="password" class="form-control" name="credentials[password]">
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                   </form>
@@ -101,42 +101,68 @@
           Logoff
         </button>
       </div>
+
+        <div class="button_container">
+        <button type="button" class="btn btn-outline-light" data-toggle="modal" data-target="#change-pass">
+          Change Password
+        </button>
+      </div>
+      </div>
+      <div class="modal fade" id="change-pass" tabindex="-1">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Change Password</h5>
+                <button type="button" class="close" data-dismiss="modal">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+              <div class="modal-body">
+                <form id="change-pass">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Old Password</label>*
+                    <input type="text" class="form-control" name="passwords[old]">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">New Password</label>
+                    <input type="password" class="form-control" name="passwords[new]">
+                  </div>
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
     </div>
-  </div>
 
     <div class="main">
       <div id="board_container">
-        <div class="a1" id="box">
-          <p>X</p>
+        <div class="a1" id="box" data-cell-index='0'>
         </div>
-        <div class="a2" id="box">
-          <p>O</p>
+        <div class="a2" id="box" data-cell-index='1'>
         </div>
-        <div class="a3" id="box">
-          <p>X</p>
+        <div class="a3" id="box" data-cell-index='2'>
         </div>
-        <div class="b1" id="box">
-          <p>O</p>
+        <div class="b1" id="box" data-cell-index='3'>
         </div>
-        <div class="b2" id="box">
-          <p>X</p>
+        <div class="b2" id="box" data-cell-index='4'>
         </div>
-        <div class="b3" id="box">
-          <p>O</p>
+        <div class="b3" id="box" data-cell-index='5'>
         </div>
-        <div class="c1" id="box">
-          <p>X</p>
+        <div class="c1" id="box" data-cell-index='6'>
         </div>
-        <div class="c2" id="box">
-          <p>O</p>
+        <div class="c2" id="box" data-cell-index='7'>
         </div>
-        <div class="c3" id="box">
-          <p>X</p>
+        <div class="c3" id="box" data-cell-index='8'>
         </div>
       </div>
 
       <div class="user_container">
-        <h1>This is an H1 in the user box</h1>
+        <div class="welcomeMessage">
+          <h1>Hey there.</h1>
+        </div>
       <div class="game_container">
         <h1>This is an H1 in the game box</h1>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Morbi leo urna molestie at elementum eu facilisis. Tincidunt vitae semper quis lectus nulla. Bibendum arcu vitae elementum curabitur vitae. Enim sit amet venenatis urna. Cursus vitae congue mauris rhoncus aenean vel elit. Ut faucibus pulvinar elementum integer. Quisque sagittis purus sit amet volutpat consequat mauris. Elit duis tristique sollicitudin nibh. Consectetur purus ut faucibus pulvinar. Nisl suscipit adipiscing bibendum est ultricies. Et leo duis ut diam quam nulla porttitor. Praesent elementum facilisis leo vel fringilla. Nisl vel pretium lectus quam id leo. Amet nisl purus in mollis nunc. Diam phasellus vestibulum lorem sed risus ultricies. Eu scelerisque felis imperdiet proin fermentum leo vel.</p>
