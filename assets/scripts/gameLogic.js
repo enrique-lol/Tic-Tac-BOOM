@@ -1,7 +1,6 @@
 const api = require('./api')
 const ui = require('./ui')
 
-let newBoard = {} // newBoard should be referenced to clean the board
 let turnCount = 1;
 let gameActive = 0;
 
