@@ -51,9 +51,23 @@ const startGame = function () {
   })
 }
 
+const updateGame = function () {
+  console.log('A move was sent to the API');
+  console.log(gameStore);
+
+  return $.ajax({
+    url: config.apiUrl + '/games/' + gameStore.game._id,
+    method: 'PATCH',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signup,
   signin,
   signout,
-  startGame
+  startGame,
+  updateGame
 };
