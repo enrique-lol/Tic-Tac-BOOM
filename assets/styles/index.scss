@@ -1,0 +1,195 @@
+@import '~bootstrap/scss/bootstrap';
+
+
+h2 {
+    font-size: 12px;
+    text-align: center;
+}
+
+.actualPlayButton {
+  border: 2px solid #999999;
+  background-color: inherit;
+  padding: 2px 2px;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.title_bar {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  width: 100%;
+  background-color: #929749;
+  margin-bottom: 10px;
+}
+
+/*span {
+  background: #000099;
+  text-align: right;
+  float: right;
+  position: absolute;
+}*/
+
+.button_container {
+  display: inline-flex;
+  //background: #009900;
+  padding: 4px;
+  align-items: stretch;
+}
+
+.button_container > div {
+  //margin: 10px;
+}
+
+body {
+  justify-content: center;
+  background-color: #927392;
+}
+
+div.main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  background-color: #927392;
+}
+
+/*#board_container:before {
+  display: grid;
+  background: #990000;
+}*/
+
+#board_container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 3px;
+  flex-grow: 1;
+  border-radius: 30px;
+}
+
+#box.a1 {
+  background: #929273;
+  text-align: center;
+}
+
+#box.a1:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#box.a2 {
+  background: #770055;
+  text-align: center;
+}
+
+#box.a2:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#box.a3 {
+  background: #929273;
+  text-align: center;
+}
+
+#box.a3:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#box.b1 {
+  background: #770055;
+  text-align: center;
+}
+
+#box.b1:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#box.b2 {
+  background: #929273;
+  text-align: center;
+}
+
+#box.b2:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#box.b3 {
+  background: #770055;
+  text-align: center;
+}
+
+#box.b3:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#box.c1 {
+  background: #929273;
+  text-align: center;
+}
+
+#box.c1:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#box.c2 {
+  background: #770055;
+  text-align: center;
+}
+
+#box.c2:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#box.c3 {
+  background: #929273;
+  text-align: center;
+}
+
+#box.c3:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+#box {
+  background: #000000;
+  //padding: 3em;
+  margin: 4px;
+  justify-self: center;
+  font-size: 80px;
+  border: 2px solid #000000;
+  border-radius: 30px;
+  width: 100%;
+  height: 100%;
+}
+
+.X::before {
+  content: 'X';
+}
+
+.O::before {
+  content: 'O';
+}
+
+.user_container {
+  background: #920092;
+  justify-self: center;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+}
+
+.game_container {
+  background: #009933;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+  text-align: left;
+}
+
+.play_button {
+  background: #009933;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 30px;
+  text-align: center;
+}
