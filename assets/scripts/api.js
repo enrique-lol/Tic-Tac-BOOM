@@ -1,26 +1,25 @@
 const config = require('./config.js')
 const store = require('./store.js')
 
-
-const signup = function (formdata) {
+// User API
+const signup = function (formData) {
   console.log('Someone registered!');
 
   return $.ajax({
     url: config.apiUrl + '/sign-up/',
     method: 'POST',
-    data: formdata
+    data: formData
   })
 }
 
-const signin = function (formdata) {
+const signin = function (formData) {
   console.log('Something wicked this way comes');
-
   $('.auth').show()
 
   return $.ajax({
     url: config.apiUrl + '/sign-in/',
     method: 'POST',
-    data: formdata
+    data: formData
   })
 }
 
@@ -39,8 +38,22 @@ const signout = function () {
   })
 }
 
+// Game API
+const startGame = function () {
+  console.log('Its Time');
+
+  return $.ajax({
+    url: config.apiUrl + '/games/',
+    method: 'POST',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 module.exports = {
   signup,
   signin,
-  signout
+  signout,
+  startGame
 };

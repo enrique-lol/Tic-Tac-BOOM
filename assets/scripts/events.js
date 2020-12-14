@@ -2,6 +2,8 @@ const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('./../../lib/get-form-fields.js')
 
+
+// User Events
 const onRegisterUser = function (event) {
   event.preventDefault();
   console.log('Register submit button clicked');
@@ -9,7 +11,7 @@ const onRegisterUser = function (event) {
   const form = event.target
   const formData = getFormFields(form)
 
-  console.log(formdata);
+  console.log(formData);
 
   api.signup(formData)
   .then(ui.onSignUpUser)
@@ -23,8 +25,8 @@ const onSignInUser = function (event) {
   const form = event.target
   const formData = getFormFields(form)
 
-  api.signin(formdata)
-  .then(ui.onSigninUser)
+  api.signin(formData)
+  .then(ui.onSignInUser)
   .catch(ui.onFailure)
 }
 
@@ -36,8 +38,11 @@ const onSignOutUser = function (event) {
   .catch(ui.onFailure)
 }
 
+// Game API Events
+
+
 module.exports = {
   onRegisterUser,
   onSignInUser,
-  onSignOutUser
+  onSignOutUser,
 };
