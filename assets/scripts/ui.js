@@ -26,10 +26,14 @@ const onFailure = function () {
   console.log('Something critical exploded.');
 }
 
-const startGame = function () {
-  console.log('Hi :)');
+const startGame = function (gameResponse) {
+  console.log('Calling Game API...');
+  store.game = gameResponse.game._id
+  console.log(gameResponse);
+  console.log(gameResponse.game._id);
+
 }
 
 // Game API UI
 
-module.exports = {onRegisterUser, onSignInUser, onSignOutUser, onFailure};
+module.exports = {onRegisterUser, onSignInUser, onSignOutUser, onFailure, startGame};

@@ -14,9 +14,11 @@ const cellSelect = function (event) {
 
   if (turnCount === 1) {
     event.target.classList.add('X');
+    //api.updateGame()
     turnCount = 2;
   } else {
     event.target.classList.add('O');
+    //api.updateGame()
     turnCount = 1;
   }
 
