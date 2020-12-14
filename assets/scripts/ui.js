@@ -32,6 +32,8 @@ const startGame = function (gameResponse) {
   console.log(gameResponse);
   console.log(gameResponse.game._id);
 
+  $('.actualPlayButton h1').text("Replay")
+
 }
 
 // Game API UI
