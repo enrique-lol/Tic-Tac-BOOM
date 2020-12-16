@@ -38,11 +38,31 @@ const onSignOutUser = function (event) {
   .catch(ui.onFailure)
 }
 
+const onChangePass = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.changepass(data)
+  .then(ui.onChangePass)
+  .catch(ui.onFailure)
+}
+
 // Game API Events
+
+const onGamesGet = function (event) {
+  event.preventDefault()
+  api.gamesGet()
+    .then(ui.onGamesGet)
+    .catch(ui.failure)
+}
 
 
 module.exports = {
   onRegisterUser,
   onSignInUser,
   onSignOutUser,
+  onChangePass,
+  onGamesGet
 };

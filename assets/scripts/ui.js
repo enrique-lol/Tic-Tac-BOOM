@@ -22,13 +22,18 @@ const onSignOutUser = function () {
   $('.auth').hide()
 }
 
+const onChangePass = function (response) {
+  //$('form').trigger('reset')
+  console.log('Alright, thats cool');
+}
+
 const onFailure = function () {
   console.log('Something critical exploded.');
 }
 
 const startGame = function (gameResponse) {
   console.log('Calling Game API...');
-  store.game = gameResponse.game._id
+  store.game = gameResponse.game
   console.log(gameResponse);
   console.log(gameResponse.game._id);
 
@@ -37,5 +42,8 @@ const startGame = function (gameResponse) {
 }
 
 // Game API UI
+const onGamesGet = function (response) {
+    $('#getGamesTotal').text(response.games.length)
+}
 
-module.exports = {onRegisterUser, onSignInUser, onSignOutUser, onFailure, startGame};
+module.exports = {onRegisterUser, onSignInUser, onSignOutUser, onFailure, startGame, onChangePass};

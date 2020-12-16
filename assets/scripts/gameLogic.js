@@ -4,6 +4,36 @@ const ui = require('./ui')
 let turnCount = 1;
 let gameActive = 0;
 
+let gameState = ['', '', '', '', '', '', '', '', '',]
+const winningStates = [
+  [0, 1, 2],
+  [3, 4, 5],
+  [6, 7, 8],
+  [0, 3, 6],
+  [1, 4, 7],
+  [2, 5, 8],
+  [0, 4, 8],
+  [2, 4, 6]
+]
+
+const winMess = function () {
+  if (turnCount = 1) {
+  $('.game_container h1').text("X wins!")
+} else {$('.game_container h1').text("O wins!")}
+
+gameActive = 0
+}
+
+const drawMess = function () {
+  if (turnCount == 1 || 2) {
+    $('.game_container h1').text("Everyone loses.")
+  }
+
+gameActive = 0
+}
+
+
+
 const cells = document.querySelectorAll('#box')
 const newGame = document.querySelectorAll('.actualPlayButton')
 
@@ -13,11 +43,11 @@ const cellSelect = function (event) {
 
   if (turnCount === 1) {
     event.target.classList.add('X');
-    //api.updateGame()
+    api.updateGame()
     turnCount = 2;
   } else {
     event.target.classList.add('O');
-    //api.updateGame()
+    api.updateGame()
     turnCount = 1;
   }
 
@@ -69,14 +99,39 @@ function resetGame (event) {
 }
 
   gameActive = 1
+  turnCount = 1
   gameEnable()
 
   api.startGame()
+}
+
+function winCheck (event) {
+  let gameWin = false;
+
+  for (let i = 0; i <=  7; i++) {
+    const winCon = winningStates[i]
+    let a = gameState[winCon[0]]
+    let b = gameState[winCon[1]]
+    let c = gameState[winCon[2]]
+
+    if ( a === '' || b === '' || c === '') {
+      continue
+    }
+    if (a === b && b === c) {
+      gameWin = true;
+      break;
+    }
+  }
+
+  if (gameWin) {
+    winMess()
+  }
 }
 
 module.exports = {
   startGame,
   cellSelect,
   resetGame,
-  gameEnable
+  gameEnable,
+  winCheck
 }
