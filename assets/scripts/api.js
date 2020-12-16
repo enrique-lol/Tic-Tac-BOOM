@@ -38,7 +38,31 @@ const signout = function () {
   })
 }
 
+const changepass = function (formData) {
+  console.log('Call Heard!')
+
+  return $.ajax({
+    url: config.apiUrl + '/change-password/',
+    method: 'PATCH',
+    data: formData,
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 // Game API
+
+const getGames = function () {
+  return $.ajax({
+    url: config.apiUrl + '/games',
+    method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + store.user.token
+    }
+  })
+}
+
 const startGame = function () {
   console.log('Its Time');
 
@@ -52,12 +76,20 @@ const startGame = function () {
 }
 
 const updateGame = function () {
-  console.log('A move was sent to the API');
-  console.log(gameStore);
-
+  console.log('A move was sent to the API')
+  console.log(store);
   return $.ajax({
-    url: config.apiUrl + '/games/' + gameStore.game._id,
+    url: config.apiUrl + '/games/' + store.game._id,
     method: 'PATCH',
+    data: {
+      game: {
+        cell: {
+          index: store.game.cells,
+          value: store.game.__v
+        },
+        over: store.game.over
+      }
+    },
     headers: {
       Authorization: 'Bearer ' + store.user.token
     }
@@ -68,6 +100,8 @@ module.exports = {
   signup,
   signin,
   signout,
+  changepass,
+  getGames,
   startGame,
   updateGame
 };

@@ -3,11 +3,6 @@
 const store = {
 }
 
-const gameStore = {
-
-}
-
 module.exports = {
-  store,
-  gameStore
+  store
 }
